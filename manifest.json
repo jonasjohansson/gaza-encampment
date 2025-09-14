@@ -2,15 +2,21 @@
   "manifest_version": 3,
   "name": "Malmö vs Gaza Population Density",
   "version": "1.0.0",
-  "description": "Visualizes population density comparison between Malmö Kommun (366,803 people) and Gaza encampment (2M people) with colored dots.",
-  "permissions": ["scripting", "activeTab", "storage"],
-  "host_permissions": ["<all_urls>"],
-  "action": { "default_title": "Show Malmö vs Gaza Population Density" },
+  "description": "Visualisation comparing Malmö's population density (366,803 people in 156.95 km²) with new Gaza encampment (2M people in 42 km²).",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Malmö vs Gaza Population Density"
+  },
   "background": { "service_worker": "background.js" },
   "commands": {
     "toggle-gaza": {
       "suggested_key": { "default": "Alt+G" },
-      "description": "Toggle Malmö vs Gaza Population Density"
+      "description": "Toggle Gaza Population"
     }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
 }
